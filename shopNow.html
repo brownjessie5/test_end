@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" charset="utf-8" src="scripts/store.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/queryList.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/queryStore.js"></script>
+</head>
+<body>
+<script>
+var myLoc=window.location.toString();
+var listId=myLoc.substring(myLoc.indexOf("=")+1);
+</script>
+<center>
+<header>
+QuikShop <a href=index.html><img src=images/Home-icon.png width="20px"></a>
+</header>
+<div>
+Choose a store to shop at
+<table id="chooseStore">
+</table>
+<script>
+txQueryStore("chooseStore");
+</script>
+</center>
+</div>
+</body>
+</html>

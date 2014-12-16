@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" charset="utf-8" src="scripts/store.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/listName.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/queryItems.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/addToList.js"></script>
+</head>
+<body>
+<header>
+QuikShop <a href=index.html><img src=images/Home-icon.png width="20px"></a>
+</header>
+<center>
+<script>
+var myLoc=window.location.toString();
+var listId=myLoc.substring(myLoc.indexOf("=")+1);
+</script>
+<section id="mainsec">
+<div id="maindivheader">
+</div>
+<div id="maindivbody">
+<div id="listnamediv></div><br><script>txListName(listId,"listnamediv");</script>
+<input type="radio" name="stype" id="starts" value="starts with" onChange="txQueryItems('starts','sterm','listitemstab')" checked>Starts With
+<input type="radio" name="stype" id="contains" value="contains" onChange="txQueryItems('starts','sterm','listitemstab')">Contains<br>
+Search <input type=text name="sterm" id="sterm" width=30 onKeyUp="txQueryItems('starts','sterm','listitemstab')"></input><br>
+<br>
+<table id="listitemstab"></table><script>console.log("list id: " + listId);txQueryItems("starts", "sterm", "listitemstab",listId);</script>
+</center>
+</div>
+</section>
+</center>
+</body>
+</html>
