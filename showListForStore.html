@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" charset="utf-8" src="scripts/store.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/listName.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/queryItems.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/queryListItems.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/addToList.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/listForStore.js"></script>
+</head>
+<body>
+<header>
+QuikShop <a href=index.html><img src=images/Home-icon.png width="20px"></a>
+</header>
+<center>
+<script>
+var myLoc=window.location.toString();
+var parms=myLoc.substring(myLoc.indexOf("=")+1);
+var storeId=parms.substring(1,parms.indexOf("&")-1);
+var listId=parms.substring(parms.indexOf("=")+1);
+</script>
+<section id="mainsec">
+<div id="maindivheader">
+</div>
+<div id="maindivbody">
+<table id="listitemstab"></table><script>txListsForStore(listId,storeId,"listitemstab");</script>
+</center>
+</div>
+</section>
+</center>
+</body>
+</html>

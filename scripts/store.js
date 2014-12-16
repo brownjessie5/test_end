@@ -18,9 +18,8 @@ function createStore(tx) {
 
 function createItem(tx) {
 	tx.executeSql('CREATE TABLE ITEM (id unique, name, sz)');
-//	tx.executeSql('INSERT INTO ITEM (id, name, sz) VALUES (1, "VanDeKamps Baked Beans", "28oz")');
-//	tx.executeSql('INSERT INTO ITEM (id, name, sz) VALUES (2, "Minute Rice", "16oz")');
-	tx.executeSql('INSERT INTO ITEM (ID, NAME) VALUES(2,"100 Calorie Right Bites Cheez-it Snack Mix - 6 Ct")');
+	tx.executeSql('INSERT INTO ITEM (id, name) VALUES (1, "VanDeKamps Baked Beans - 28oz")');
+	tx.executeSql('INSERT INTO ITEM (id, name) VALUES (2, "Minute Rice - 16oz box")');
 	tx.executeSql('INSERT INTO ITEM (ID, NAME) VALUES(3,"100 Calorie Right Bites Chips Deluxe Cookies - 6 Ct")');
 	tx.executeSql('INSERT INTO ITEM (ID, NAME) VALUES(4,"100 Calorie Right Bites Fudge Dipped Pretzels - 6 Ct")');
 	tx.executeSql('INSERT INTO ITEM (ID, NAME) VALUES(5,"100 Calorie Right Bites Fudge Grahams Crackers - 6 Ct")');
